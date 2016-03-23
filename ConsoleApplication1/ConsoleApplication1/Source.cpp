@@ -17,6 +17,11 @@ public:
 		cout << rm << " + " << im << "i" << endl;
 	}
 
+	void Read(double &a, double &b) {
+		a = rm;
+		b = im;
+	}
+
 };
 
 int main()
@@ -24,6 +29,13 @@ int main()
 	CComplexNumber a;
 	a.Set(3, 4);
 	a.Display();
+
+	double rm, im;
+
+	a.Read(rm, im);
+	a.Set(rm + 2, im + 2);
+	a.Display();
+
 
 	getchar();
 	return 0;
